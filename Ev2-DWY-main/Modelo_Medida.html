@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function coste_aproximado()
+        {
+            var baño = 750000
+            var habitaciones = 500000
+            var living = 550000
+            var comedor = 550000 
+            var cantidad_pisos = document.getElementById("segundoPiso")
+            var ampliasVentanas = 200000
+            var cocina = 600000 
+            var cantidad_hab = document.getElementById("CantHab")
+            var cantidad_ba = document.getElementById("cantBaños")
+            var costeAproximado = ((habitaciones*cantidad_hab)+(baño*cantidad_ba)+cocina+living+comedor)*cantidad_pisos
+            
+            return true;
+        }
+    </script>
+</head>
+<link href="Main.css" rel="stylesheet" type = "text/css">
+<link href="flexboxgrid.min.css" rel="stylesheet" type = "text/css">
+<body>
+    <header class="row" style="background-color: #a75e00;">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <button class="boton" onclick="window.location.href='index.html'">Inicio</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <button class="boton" onclick="window.location.href='QuienesSomos.html'">Quienes somos</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <button class="boton" onclick="window.location.href='web.html'">Galeria</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <button class="boton" onclick="window.location.href='Desarrollo.html'"style="background-color: #734100;">Modelo a medida</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <button class="boton"  onclicK="window.location.href='Descargas.html'">Modelo por metraje</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+            <button class="boton" onclick="window.location.href='Contacto.html'">Contacto</button>
+        </div>
+    </header>
+    <header class="row" style="text-align: center; background-image: url(https://www.casasprefabricadaschile.site/wp-content/uploads/elementor/thumbs/yaryna-bakhovska-1108995-unsplash-o63opbnmhfb5hcl1u67m8grbulpj5bwy5d8u832uy6.jpg);background-repeat: no-repeat;background-size: 100%;background-position: center;background-color: rgb(117, 117, 117);">
+        <div class="col-lg-6">
+            <h1>Modelo a medida</h1>
+            <p>
+                Cantidad de baños: <select id = "cantBaños"select name= "optionlist" onChange="combo(this, 'demo')">
+                    <option value = 1 >1</option>
+                    <option value = 2 >2</option>
+                    </select>
+                <br><br>
+                Cantidad de habitaciones: <select id= "CantHab" select name= "optionlist" onChange="combo(this, 'demo')">
+                    <option value = 1 >1</option>
+                    <option value = 2 >2</option>
+                    <option value = 3 >3</option>
+                    <option value = 4 >4</option>
+                    </select>
+                <br><br>
+                Living: <select id= "living"select name= "optionlist" onChange="combo(this, 'demo')">
+                    <option valuetext="si" >Si</option>
+                    <option valuetext="no" >No</option>
+                    </select>
+                <br><br>
+                Comedor: <select id= "comedor" select name= "optionlist" onChange="combo(this, 'demo')">
+                    <option>Si</option>
+                    <option>No</option>
+                    </select>
+                <br><br>
+                Segundo piso: <select id="2piso" select id ="segundoPiso" select name= "optionlist" onChange="combo(this, 'demo')">
+                    <option>Si</option>
+                    <option>No</option>
+                    </select>
+                <br><br>
+                Amplias ventanas: <select id="ampVentanas" select name= "optionlist" onChange="combo(this, 'demo')">
+                    <option>Si</option>
+                    <option>No</option>
+                    </select>
+                <br><br>
+                <input type="submit" value="Enviar" onsubmit= "return coste_aproximado()">
+              </p>
+        </div>
+        <div class="col-lg-6">
+            <br><br><br><br>
+            <h1>Coste aproximado</h1>
+            <p class="coste">$0</p>
+            <img src="https://www.hola.com/imagenes/decoracion/20200330164397/ventajas-de-las-casas-prefabricadas/0-804-938/casas-prefabricadas-6t-t.jpg" style="width: 24%;">
+            <img src="Imgs/c01.png" style="width: 24%;">
+            <img src="Imgs/c02.png" style="width: 24%;">
+        </div>
+    </header>
+    <hr>
+    <header class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-12" style="text-align: center;">
+            <a href="">Contactanos</a>
+            <h1>+56 2 1234 5678</h1>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-12" style="text-align: center;">
+            <img src="iconos/tw.png" alt="" style="width: 10%;">
+            <img src="iconos/fa.png" alt="" style="width: 10%;">
+            <img src="iconos/li.png" alt="" style="width: 10%;">
+        </div>
+    </header>
+</body>
+</html>
